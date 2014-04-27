@@ -1,18 +1,22 @@
 class Caesar
 
-  def output(file_name)
-    File.new(file_name, 'r').each_line.map(&:strip)
+  def initialize
+    @letters = ('A'..'Z').to_a
+  end
+
+
+  def parse(file_name)
+    File.new(file_name, 'r').each_line.map(&:strip).join
   end
 
   def decode(file_name)
-    file = File.new(file_name, 'r')
-    attend = file
-      .each_line
-      .map(&:to_i)
-      .sort{ |x, y| x <=> y }
-      .each_with_index { |val, index| 
+     parse(file_name)
+      .chars
+      .map { |s| 
+        s.tr('A-Z', '1-9a-q').to_i(27) - 4
       }
-      (1..30).to_a - attend
+      .map{ |n| @letters[n] }
+      .join
   end
 
 end
