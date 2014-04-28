@@ -22,25 +22,21 @@ describe Caesar do
   
   context '2007-yo-t3-in2.txt' do
     let(:file_name) { File.expand_path('../../../2007-yo-data/2007-yo-t3-in2.txt', __FILE__) }
-    let(:output) { File.expand_path('../../../2007-yo-data/2007-yo-t3-out2.txt', __FILE__) }
     it { should eq @output2}
   end
 
   context '2007-yo-t3-in3.txt' do
     let(:file_name) { File.expand_path('../../../2007-yo-data/2007-yo-t3-in3.txt', __FILE__) }
-    let(:output) { File.expand_path('../../../2007-yo-data/2007-yo-t3-out3.txt', __FILE__) }
     it { should eq @output3 }
   end
 
   context '2007-yo-t3-in4.txt' do
     let(:file_name) { File.expand_path('../../../2007-yo-data/2007-yo-t3-in4.txt', __FILE__) }
-    let(:output) { File.expand_path('../../../2007-yo-data/2007-yo-t3-out4.txt', __FILE__) }
     it { should eq @output4 }
   end
 
   context '2007-yo-t3-in5.txt' do
     let(:file_name) { File.expand_path('../../../2007-yo-data/2007-yo-t3-in5.txt', __FILE__) }
-    let(:output) { File.expand_path('../../../2007-yo-data/2007-yo-t3-out5.txt', __FILE__) }
     it { should eq @output5 }
   end
 end
